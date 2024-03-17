@@ -19,7 +19,7 @@ To run Chateo on your local machine, follow these steps:
 Clone the repository from GitHub: 
 
 ```
-git clone https://github.com/Thomas-Max99/Chateo.git
+git clone https://github.com/Fisafe/bionova.git
 ```
 
 Navigate to the project directory: 
