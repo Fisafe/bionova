@@ -1,42 +1,38 @@
-# Complete NodeJs Express api
+# API completa NodeJs Express
 
-This is a simple project that utilizes Node.js, Express, and MongoDB to create a web application for data management.
+Este é um projeto simples que utiliza Node.js, Express e MongoDB para criar uma aplicação web para gerenciamento de dados.
 
-## Installation
+## Instalação
 
-Make sure you have Node.js and MongoDB installed on your system before proceeding.
+Certifique-se de ter o Node.js e o MongoDB instalados em seu sistema antes de prosseguir.
 
-1. Clone this repository:
+1. Clone este repositório:
 
    ```bash
    git clone https://github.com/Fisafe/bionova.git
    ```
 
-2. Navigate to the project directory:
+2. Navegue até o diretório do projeto:
 
    ```bash
    cd bionova/backend
    ```
 
-3. Install project dependencies:
+3. Instale as dependências do projeto:
    ```bash
    npm install
    ```
 
-## Database Configuration
+## Uso
 
-This project requires a running MongoDB server. Ensure you have MongoDB installed and running on your system.
-
-## Usage
-
-To start the server, run the following command:
+Para iniciar o servidor, execute o seguinte comando:
 
 ```bash
 npm run start:dev
 ```
 
-This will start the Express server on the default port 3000. You can access the application in your browser at `http://localhost:3000`.
+Isso iniciará o servidor Express na porta padrão 3000. Você pode acessar a aplicação no seu navegador através de `http://localhost:3000`.
 
-## License
+```
 
-This project is licensed under the MIT License.
+```
