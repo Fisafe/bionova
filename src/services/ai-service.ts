@@ -1,8 +1,8 @@
 import axios from 'axios'
 import env from '../config/env'
 
-export class ChatGptService {
-  static async completions (data: any): Promise<any> {
+export class AIService {
+  static async sprayerCalc (data: any): Promise<any> {
     const text = `Você é um agricultor empenhado em aperfeiçoar a aplicação de pesticidas em sua lavoura, visando maximizar a eficiência, minimizar o tempo parado e otimizar os percursos até os pontos de recarga. Ao dispor de vários pontos de recarga distribuídos pela área cultivada, elimina-se a necessidade de voltar ao ponto de partida para recarregar. A seguir, detalham-se os parâmetros necessários para a análise:
 
     *Parâmetros de Entrada:*
@@ -57,45 +57,18 @@ export class ChatGptService {
       })
   }
 
-  static async assistants (data: any): Promise<any> {
-    const body = {
-      instructions: 'You are a personal math tutor. When asked a question, write and run Python code to answer the question.',
-      name: 'Math Tutor',
-      tools: [{ type: 'code_interpreter' }],
-      model: 'gpt-4'
-    }
+  static async imageProcessing (file: any, assistantId: any): Promise<any> {
+    const fileId = file.file_id
     const options = {
       method: 'POST',
-      url: 'https://api.openai.com/v1/assistants',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${env.chatGptSecretKey}`,
-        'OpenAI-Beta': 'assistants=v1'
-      },
-      data: body
-    }
-
-    return axios
-      .request(options)
-      .then(function (response) {
-        return response.data
-      })
-      .catch(function (error) {
-        throw new Error(error.message)
-      })
-  }
-
-  static async assistantFile (file: any): Promise<any> {
-    const options = {
-      method: 'POST',
-      url: 'https://api.openai.com/v1/assistants',
+      url: `https://api.openai.com/v1/assistants/${assistantId}/files`,
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${env.chatGptSecretKey}`,
         'OpenAI-Beta': 'assistants=v1'
       },
       data: {
-        file_id: file
+        file_id: fileId
       }
     }
 
